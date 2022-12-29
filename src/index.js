@@ -6,6 +6,7 @@ const app = express();
 const port = 3000;
 
 app.use(morgan('combined'))
+app.use(express.static(path.join(__dirname + 'public')));
 
 // template engine
 app.engine('hbs', engine({
