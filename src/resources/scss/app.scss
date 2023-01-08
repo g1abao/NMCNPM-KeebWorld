@@ -2,3 +2,38 @@ h1 {
     color: red;
     
 }
+
+.container{
+    width: 100%;
+}
+
+.danh-muc{
+    margin: 2rem;
+}
+
+.hop-danh-muc{
+    width: 24rem;
+    font-weight: 777;
+}
+
+.hop-danh-muc-san-pham{
+    width: 24rem;
+}
+
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+.hang-san-pham{
+    margin-right: 1rem;
+}
+
+.san-pham{
+    margin:1rem;
+    text-align: center;
+}
+
+.gia-tien-san-pham{
+    color: red;
+}

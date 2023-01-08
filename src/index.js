@@ -8,10 +8,10 @@ const port = 3000;
 
 app.use(morgan('combined'))
 
-app.use(express.static(path.join(__dirname + 'public')));
-app.use('/img',express.static(path.join(__dirname, 'public/img')));
-app.use('/js',express.static(path.join(__dirname, 'public/js')));
-app.use('/css',express.static(path.join(__dirname, 'public/css')));
+// app.use(express.static(path.join(__dirname + 'public')));
+// app.use('/js',express.static(path.join(__dirname, 'public/js')));
+app.use(express.static(path.join(__dirname, 'public/css')));
+app.use(express.static(path.join(__dirname, 'public/img')));
 // template engine
 app.engine('hbs', engine({
   extname: '.hbs'
@@ -30,6 +30,10 @@ app.get('/news', (req, res) => {
 
 app.get('/login', (req, res) => {
   res.render('login');
+})
+
+app.get('/product', (req, res) => {
+  res.render('product');
 })
 
 
