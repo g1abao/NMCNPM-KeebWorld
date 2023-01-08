@@ -24,12 +24,6 @@ app.engine('hbs', engine({
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'src/resources/views'))
 
-
-// routes
-app.get('/shop', (req, res) => {
-  res.render('shop');
-})
-
 app.get('/about-us', (req, res) => {
   res.render('about-us')
 })
