@@ -110,10 +110,11 @@
     </form>
   </div>
 
-  {{#each products}}
+  
     <div class="flex-container row">
       <div class="row">
         <!-- sanpham1 -->
+        {{#each products}}
         <div class="card san-pham" style="width: 16rem;">
           <img
             class="card-img-top"
@@ -130,7 +131,7 @@
             </a>
           </div>
         </div>
+          {{/each}}
       </div>
     </div>
-  {{/each}}
 </body>
