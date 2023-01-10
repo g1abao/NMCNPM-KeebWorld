@@ -1,32 +1,32 @@
 <body>
-    <table>
-  <thead>
-    <tr>
-      <th>Item</th>
-      <th>Price</th>
-      <th>Quantity</th>
-      <th>Total</th>
-    </tr>
-  </thead>
-  <tbody>
-    {{#each items}}
-    <tr>
-      <td>{{name}}</td>
-      <td>${{price}}</td>
-      <td>
-        <input type="number" value="{{quantity}}" min="1" />
-      </td>
-      <td>${{total}}</td>
-    </tr>
-    {{/each}}
-  </tbody>
-  <tfoot>
-    <tr>
-      <td colspan="3">Total:</td>
-      <td>${{total}}</td>
-    </tr>
-  </tfoot>
-</table>
-
-<button>Thanh toán</button>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+              <if no item></if>
+              <else>
+                <h1>Cart</h1>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each cart}}
+                        <tr>
+                            <td>{{name}}</td>
+                            <td>{{quantity}}</td>
+                            <td>{{price}}</td>
+                            <td>{{total}}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+              </else>
+            </div>
+        </div>
+    </div>
 </body>
