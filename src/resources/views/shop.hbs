@@ -1,119 +1,114 @@
 <body>
   <br />
+
+  <form action="" method="get">
+    <div class="row mb-4">
+      <div class="form-group col-md-9">
+        <input
+          id="exampleFormControlInput5"
+          type="email"
+          placeholder="Nhập tên sản phẩm bạn muốn tìm"
+          class="form-control form-control-underlined"
+        />
+      </div>
+      <div class="form-group col-md-3">
+        <button
+          type="submit"
+          class="btn btn-outline-success rounded-pill btn-block shadow-sm"
+          {{!-- T để sẵn cho nè --}}
+          {{!-- name="category"
+          value="kit" --}}
+        >Tìm kiếm</button> 
+      </div>
+    </div>
+  </form>
+
+  {{! 2 }}
   <div class="flex-container row">
     <div class="row">
       <!-- Example single danger button -->
-      {{! <div class="col 1"> 
-          <div class="btn-group danh-muc">
-            <button type="button" class="btn btn-white dropdown-toggle hop-danh-muc" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Danh mục sản phẩm
-            </button>
-            <form method="get">
-              <div class="dropdown-menu">
-              <a class="dropdown-item hop-danh-muc-san-pham" name="filter_shop" value="filter_keyboard">Keyboard</a>
+      <div class="col">
+        <div class="btn-group danh-muc">
+          <button
+            type="button"
+            class="btn btn-white dropdown-toggle hop-danh-muc"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Danh mục sản phẩm
+          </button>
+          <form method="get">
+            <div class="dropdown-menu">
+              <form action="" method="get">
+                <button
+                  type="submit"
+                  class="btn btn-white dropdown-item hop-danh-muc-san-pham"
+                  name="category"
+                  value="kit"
+                >Kit</button>
+              </form>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" name="filter_shop" value="filter_switch">Switch</a>
+              <form action="" method="get">
+                <button
+                  type="submit"
+                  class="btn btn-white dropdown-item hop-danh-muc-san-pham"
+                  name="category"
+                  value="keycap"
+                >Keycap</button>
+              </form>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" name="filter_shop" value="filter_keycap">Keycap</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" name="filter_shop" value="filter_kit">Kit</a>
+              <form action="" method="get">
+                <button
+                  type="submit"
+                  class="btn btn-white dropdown-item hop-danh-muc-san-pham"
+                  name="category"
+                  value="switches"
+                >Switches</button>
+              </form>
             </div>
-            </form>
+          </form>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="btn-group danh-muc">
+          <button
+            type="button"
+            class="btn btn-white dropdown-toggle hop-danh-muc"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Nhà cung cấp
+          </button>
+          <div class="dropdown-menu hop-danh-muc">
+            <a class="dropdown-item" href="#">Akko</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Payson</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Milkway</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">JWK</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Durock</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Jwick</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">KBD</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Other</a>
           </div>
         </div>
-        
-        <div class="col 1">
-          <div class="btn-group danh-muc">
-            <button type="button" class="btn btn-white dropdown-toggle hop-danh-muc" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Nhà cung cấp
-            </button>
-            <div class="dropdown-menu hop-danh-muc">
-              <a class="dropdown-item" href="#">Akko</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Payson</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Milkway</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">JWK</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Durock</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Jwick</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">KBD</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Other</a>
-            </div>
-          </div>
-        </div> }}
-
-      <div class="col 3">
-        <form action="" method="get">
-          <button
-            type="submit"
-            class="btn btn-dark"
-            value="kit"
-            name="category"
-          >Kit</button>
-        </form>
-
-      </div>
-
-      <div class="col 3">
-        <form action="" method="get">
-          <button
-            type="submit"
-            class="btn btn-dark"
-            value="keycap"
-            name="category"
-          >Keycap</button>
-        </form>
-      </div>
-
-      <div class="col 3">
-        <form action="" method="get">
-          <button
-            type="submit"
-            class="btn btn-dark"
-            value="switches"
-            name="category"
-          >Switches</button>
-        </form>
-      </div>
-
-      <div class="col 5">
-        <form method="post">
-          <button
-            type="submit"
-            class="btn btn-dark"
-            value="reset"
-            name="reset_but"
-          >Reset</button>
-        </form>
       </div>
 
     </div>
   </div>
 
-  <div class="row">
-    <form class="form-inline my-2 my-lg-0" method="get">
-      <input
-        class="form-control mr-sm-2"
-        type="search"
-        placeholder="Search"
-        aria-label="Search"
-      />
-      <button
-        class="btn btn-outline-success my-2 my-sm-0"
-        type="submit"
-      >Search</button>
-    </form>
-  </div>
-
-  {{#each products}}
-    <div class="flex-container row">
-      <div class="row">
-        <!-- sanpham1 -->
+  <div class="flex-container row">
+    <div class="row">
+      <!-- sanpham1 -->
+      {{#each products}}
         <div class="card san-pham" style="width: 16rem;">
           <img
             class="card-img-top"
@@ -125,12 +120,20 @@
           <div class="card-body">
             <h5 class="card-title">{{name}}</h5>
             <h6 class="card-text gia-tien-san-pham">{{price}}đ</h6>
-            <a href="#" class="btn btn-light">THÊM VÀO GIỎ HÀNG
+            <button href="#" class="btn btn-light" onclick="addToCart()">THÊM VÀO GIỎ HÀNG
               <i class="bi-cart" style="color: red;"></i>
-            </a>
+            </button>
+            <script>
+              function addToCart() {
+                alert('Item added to cart!')
+                //add item to cart 
+              }
+            </script>
           </div>
         </div>
-      </div>
+      {{/each}}
     </div>
-  {{/each}}
+  </div>
 </body>
+
+{{!  }}
