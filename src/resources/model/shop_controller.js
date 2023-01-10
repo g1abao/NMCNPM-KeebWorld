@@ -7,7 +7,7 @@ exports.shop = async (req, res) => {
   const { category } = req.query;
 
   let products = [];
-  products = await service.getAllProduct();
+  products = await service.getAllProducts();
 
   if (category) {
     products = await service.filter_kit(category);
@@ -16,4 +16,11 @@ exports.shop = async (req, res) => {
   res.render('shop', { products })
 };
 
+exports.detail = async (req, res, next) => {
+  const { id_product } = req.params;
+
+  const product = await service.getProduct(id_product);
+
+  res.render('product-detail', { product });
+}
 
