@@ -15,3 +15,5 @@ exports.shop = async (req, res) => {
 
   res.render('shop', { products })
 };
+
+
