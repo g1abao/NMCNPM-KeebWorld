@@ -8,7 +8,7 @@ const db = {connection: null};
       host: 'localhost',
       user: 'root',
       database: 'cnpm_keebworld',
-      password: '123456'
+      password: 'Taodem123'
   
     });
     console.log('Database connected!');
