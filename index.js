@@ -33,7 +33,7 @@ app.get('/about-us', (req, res) => {
 app.use('/home', homeRouter);
 app.use('/shop', shopRouter);
 app.use('/cart', cart);
-app.use('/resigter', register);
+app.use('/register', register);
 
 // listen
 app.listen(port, () => {
