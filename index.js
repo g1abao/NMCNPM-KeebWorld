@@ -10,8 +10,6 @@ const port = 3000;
 const homeRouter = require('./src/routes/home_router');
 const shopRouter = require('./src/routes/shop_router');
 const cart = require('./src/routes/cart');
-const register = require('./src/routes/register_router');
-
 
 app.use(morgan('combined'))
 // using express static
@@ -33,7 +31,6 @@ app.get('/about-us', (req, res) => {
 app.use('/home', homeRouter);
 app.use('/shop', shopRouter);
 app.use('/cart', cart);
-app.use('/resigter', register);
 
 // listen
 app.listen(port, () => {
