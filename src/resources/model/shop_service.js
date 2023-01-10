@@ -8,3 +8,6 @@ exports.filter_kit = (category) => {
     return repo.filter_kit(category);
 }
 
+exports.getProductbyID = (id) => {
+    return repo.find(id);
+}

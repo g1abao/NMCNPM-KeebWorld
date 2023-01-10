@@ -31,7 +31,8 @@ app.get('/about-us', (req, res) => {
 
 app.use('/home', homeRouter);
 app.use('/shop', shopRouter);
-app.use('/cart', cart)
+app.use('/cart', cart);
+
 // listen
 app.listen(port, () => {
   console.log(`Example app listening on http://localhost:${port}/home`)

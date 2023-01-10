@@ -120,15 +120,12 @@
           <div class="card-body">
             <h5 class="card-title">{{name}}</h5>
             <h6 class="card-text gia-tien-san-pham">{{price}}đ</h6>
-            <button href="#" class="btn btn-light" onclick="addToCart()">THÊM VÀO GIỎ HÀNG
+            <form action="/shop/add-to-cart" method="POST">
+              <input type="hidden" name="id_product" value="{{id_product}}">
+              <button href="#" class="btn btn-light">THÊM VÀO GIỎ HÀNG
               <i class="bi-cart" style="color: red;"></i>
-            </button>
-            <script>
-              function addToCart() {
-                alert('Item added to cart!')
-                //add item to cart 
-              }
-            </script>
+              </button>
+            </form>
           </div>
         </div>
       {{/each}}
