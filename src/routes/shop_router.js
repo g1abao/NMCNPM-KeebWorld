@@ -7,5 +7,6 @@ router.get('/', shopController.shop);
 
 router.post('/add-to-cart', shopController.add_to_cart);
 //shopController.add_to_cart
+router.get('/:id_product', shopController.detail);
 
 module.exports = router;

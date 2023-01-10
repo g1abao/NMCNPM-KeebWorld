@@ -8,17 +8,17 @@
           id="exampleFormControlInput5"
           type="email"
           placeholder="Nhập tên sản phẩm bạn muốn tìm"
-          class="form-control form-control-underlined"
+          class="form-control form-control-underlined pl-4"
         />
       </div>
       <div class="form-group col-md-3">
         <button
           type="submit"
           class="btn btn-outline-success rounded-pill btn-block shadow-sm"
-          {{!-- T để sẵn cho nè --}}
-          {{!-- name="category"
-          value="kit" --}}
-        >Tìm kiếm</button> 
+          {{! T để sẵn cho nè }}
+          {{! name="category"
+          value="kit" }}
+        >Tìm kiếm</button>
       </div>
     </div>
   </form>
@@ -110,21 +110,30 @@
       <!-- sanpham1 -->
       {{#each products}}
         <div class="card san-pham" style="width: 16rem;">
-          <img
-            class="card-img-top"
-            src="products/1.jpg"
-            alt="Card image cap"
-            width="240"
-            height="240"
-          />
+          <a href="/shop/{{id_product}}">
+            <img
+              class="card-img-top"
+              src="products/1.jpg"
+              alt="Card image cap"
+              width="240"
+              height="240"
+            />
+          </a>
+          
           <div class="card-body">
             <h5 class="card-title">{{name}}</h5>
             <h6 class="card-text gia-tien-san-pham">{{price}}đ</h6>
             <form action="/shop/add-to-cart" method="POST">
               <input type="hidden" name="id_product" value="{{id_product}}">
-              <button href="#" class="btn btn-light">THÊM VÀO GIỎ HÀNG
-              <i class="bi-cart" style="color: red;"></i>
+              <button href="#" class="btn btn-light" onclick="addToCart()">THÊM
+                VÀO GIỎ HÀNG
+                <i class="bi-cart" style="color: red;"></i>
               </button>
+
+              <script>
+                function addToCart() { alert('Item added to cart!') //add item to
+                cart }
+              </script>
             </form>
           </div>
         </div>
