@@ -1,7 +1,7 @@
-<html>
-  <head>
+  {{!-- <head>
     <title>Product Details</title>
-
+    <link rel="stylesheet" href="../../scss/productdetails.css">
+  </head> --}}
   <body>
     <div class="product-name ">
         <h1>{{product.name}}</h1>
@@ -10,10 +10,8 @@
   <div class="product-code">
     <label>Mã sản phẩm:</label>
     <p>{{id_product}}</p>
-
-    <div class="product-code">
-        <label>{{product.id_product}}</label>
-
+    <label>{{product.id_product}}</label>
+</div>
   <div class="product-status">
     <label>Tình trạng: </label>
     <p>Còn hàng</p>
@@ -31,10 +29,11 @@
   </div>
 
   <script>
-    function totalClick(click){ const sum =
-    document.getElementById('totalClicks'); const sumvalue =
-    parseInt(totalClicks.innerText)+click; totalClicks.innerText = sumvalue ;
-    //avoid negative numbers if (sumvalue<0){ totalClicks.innerText = 0; } }
+    function totalClick(click){ 
+        const sum = document.getElementById('totalClicks'); 
+        const sumvalue = parseInt(totalClicks.innerText)+click; totalClicks.innerText = sumvalue ;
+    //avoid negative numbers 
+        if (sumvalue<0){ totalClicks.innerText = 0; } }
   </script>
 
   <div class="storages">
