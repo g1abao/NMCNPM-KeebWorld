@@ -124,7 +124,7 @@
             <h5 class="card-title">{{name}}</h5>
             <h6 class="card-text gia-tien-san-pham">{{price}}đ</h6>
             <form action="/shop/add-to-cart" method="POST">
-              <input type="hidden" name="id_product" value="{{id_product}}">
+              <input type="hidden" name="cart" value="{{id_product}}">
               <button href="#" class="btn btn-light" onclick="addToCart()">THÊM
                 VÀO GIỎ HÀNG
                 <i class="bi-cart" style="color: red;"></i>
