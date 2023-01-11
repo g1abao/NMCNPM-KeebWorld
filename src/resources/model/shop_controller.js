@@ -7,12 +7,16 @@ const Cart = require("./cart")
 
 exports.shop = async (req, res) => {
   const { category } = req.query;
+  const { brand } = req.query;
 
   let products = [];
   products = await service.getAllProducts();
 
   if (category) {
     products = await service.filter_kit(category);
+  }
+  if (brand) {
+    products = await service.filter_brand(brand);
   }
 
   res.render('shop', { products })

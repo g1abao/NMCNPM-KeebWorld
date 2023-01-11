@@ -13,13 +13,20 @@ exports.filter_kit = async (category) => {
   return result[0];
 };
 
+exports.filter_brand = async (brand) => {
+  const result = await db.connection.execute(
+    "select * from product where brand = ?",
+    [brand]
+  );
+};
+
 exports.find = async (id) => {
   const result = await db.connection.execute(
     "select * from product where id_product = ?",
     [id]
   );
   return result[0][0];
-}
+};
 exports.getProduct = async (id_product) => {
   const result = await db.connection.execute(
     "select * from product where id_product = ?",
