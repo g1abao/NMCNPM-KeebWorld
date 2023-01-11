@@ -15,3 +15,7 @@ exports.getProductbyID = (id) => {
 exports.getProduct = (id_product) => {
   return repo.getProduct(id_product);
 };
+
+exports.getSearch = (product) => {
+  return repo.search_product(product);
+}

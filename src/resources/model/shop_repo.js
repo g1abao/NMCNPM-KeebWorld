@@ -19,11 +19,20 @@ exports.find = async (id) => {
     [id]
   );
   return result[0][0];
-}
+};
+
 exports.getProduct = async (id_product) => {
   const result = await db.connection.execute(
     "select * from product where id_product = ?",
     [id_product]
   );
   return result[0][0];
+};
+
+exports.search_product = async (product) => {    // truy van san pham search
+  const result = await db.connection.execute(
+    "select * from product where name like ?",
+    [`%${product}%`]    
+  );
+  return result[0];
 };
