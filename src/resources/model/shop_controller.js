@@ -13,7 +13,7 @@ exports.shop = async (req, res) => {
 
   const { search_shop } = req.query;  // Lay ten san pham tim kiem
   if (search_shop) {
-    products = await service.getSearch(search_shop);
+    products = await service.search_product(search_shop);
   }
 
   if (category) {

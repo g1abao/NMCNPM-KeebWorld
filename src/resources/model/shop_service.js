@@ -20,6 +20,6 @@ exports.getProduct = (id_product) => {
   return repo.getProduct(id_product);
 };
 
-exports.getSearch = (product) => {
+exports.search_product = (product) => {
   return repo.search_product(product);
 }
