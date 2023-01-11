@@ -27,10 +27,7 @@ exports.find = async (id) => {
   );
   return result[0][0];
 };
-<<<<<<< HEAD
-=======
 
->>>>>>> 82f2fccd3610d843673ce8aa5192d38297bdb220
 exports.getProduct = async (id_product) => {
   const result = await db.connection.execute(
     "select * from product where id_product = ?",
