@@ -39,11 +39,12 @@
   display: flex;
   justify-content: center;
   position: absolute;
-  width: 463px;
-  height: 312px;
-  top: 77px;
+  width: 460px;
+  height: 460px;
+
 
   background: url(./images/product1.jpg);
+  
 }
 
 .product-image hr {
