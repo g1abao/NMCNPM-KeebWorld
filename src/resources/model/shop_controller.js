@@ -26,8 +26,7 @@ exports.shop = async (req, res) => {
   res.render('shop', { products })
 };
 
-module.exports.add_to_cart = async (req, res) => {
-  console.log(req.body)
+exports.add_to_cart = async (req, res) => {
   const { cart } = req.body;
   const product = await service.getProductbyID(cart);
 
