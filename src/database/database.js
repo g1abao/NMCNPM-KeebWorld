@@ -9,7 +9,6 @@ const db = {connection: null};
       user: 'root',
       database: 'cnpm_keebworld',
       password: '123456'
-  
     });
     console.log('Database connected!');
 })(); //

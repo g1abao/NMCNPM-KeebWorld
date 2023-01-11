@@ -18,6 +18,7 @@ exports.filter_brand = async (brand) => {
     "select * from product where brand = ?",
     [brand]
   );
+  return result[0];
 };
 
 exports.find = async (id) => {

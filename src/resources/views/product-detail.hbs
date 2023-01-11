@@ -7,17 +7,17 @@
     <h1>{{product.name}}</h1>
   </div>
   <div class="product-image">
-      <img src="../products/1.jpg" alt="Product Name">
+      <img src="{{product.img}}" alt="Product Name">
       <hr>
   </div>
   <div class="product-code">
-    <label>Mã sản phẩm:</label>
-    <p>{{id_product}}</p>
+    <label>Mã sản phẩm:&nbsp;</label>
+    
     <label>{{product.id_product}}</label>
   </div>
   <div class="product-status">
-    <label>Tình trạng: </label>
-    <p>Còn hàng</p>
+    <label>Tình trạng:&nbsp;</label>
+    <label>Còn hàng</label>
   </div>
 
   <div class="product-price">
@@ -26,10 +26,14 @@
   </div>
 
   <div class="product-quantity">
-    <label for="quantity">Số lượng:</label>
-    <button id="plus" onclick="totalClick(1)">+</button>
+    <label for="quantity">Số lượng:&nbsp;</label>
+    
+    <label>&nbsp;</label>
+    <button id="minus" onclick="totalClick(-1)">&nbsp;-&nbsp;</button>
+    <label>&nbsp;</label>
     <span id="totalClicks">0</span>
-    <button id="minus" onclick="totalClick(-1)">-</button>
+    <label>&nbsp;</label>
+    <button id="plus" onclick="totalClick(1)">&nbsp;+&nbsp;</button>
   </div>
 
   <script>
@@ -40,8 +44,8 @@
   </script>
 
   <div class="storages">
-    <label>Tồn kho: </label>
-    <p>3 sản phẩm</p>
+    <label>Tồn kho:&nbsp;</label>
+    <label>3 sản phẩm</label>
   </div>
 
   <button class="Buy-now">Mua Ngay</button>
