@@ -4,17 +4,14 @@
   <form action="" method="get">
     <div class="row mb-4">
       <div class="form-group col-md-9">
-<<<<<<< HEAD
         <input id="exampleFormControlInput5" type="email" placeholder="Nhập tên sản phẩm bạn muốn tìm"
           class="form-control form-control-underlined pl-4" />
-=======
         <input name="search_shop"
           id="exampleFormControlInput5"
           type="text"
           placeholder="Nhập tên sản phẩm bạn muốn tìm"
           class="form-control form-control-underlined pl-4"
         />
->>>>>>> 82f2fccd3610d843673ce8aa5192d38297bdb220
       </div>
       <div class="form-group col-md-3">
         <button type="submit" class="btn btn-outline-success rounded-pill btn-block shadow-sm" {{! T để sẵn cho nè }}
@@ -101,19 +98,18 @@
         <div class="card-body">
           <h5 class="card-title">{{name}}</h5>
           <h6 class="card-text gia-tien-san-pham">{{price}}đ</h6>
-          <form action="/shop/add-to-cart" method="POST">
-            <input type="hidden" name="cart" value="{{id_product}}" />
-            <button href="#" class="btn btn-light" onclick="addToCart()">THÊM
+          <form method="post">
+            <button class="btn btn-light" name="cart" type="submit" value="{{id_product}}">THÊM
               VÀO GIỎ HÀNG
-              <i class="bi-cart" style="color: red;"></i>
+              {{!-- <i class="bi-cart" style="color: red;" name="cart" value="{{id_product}}"></i> --}}
             </button>
 
-            <script>
+            {{!-- <script>
               function addToCart() {
                 alert('Item added to cart!') //add item
                 to cart
               }
-            </script>
+            </script> --}}
           </form>
         </div>
       </div>

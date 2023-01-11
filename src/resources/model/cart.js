@@ -14,10 +14,10 @@ module.exports = class Cart {
         }
         const isExisting = cart.products.findIndex(p => p.id_product == product.id_product);
         if (isExisting >= 0) {
-            cart.qty[isExisting] += 1;
+            cart.products[isExisting].qty += 1;
         } else {
+            product['qty'] = 1;
             cart.products.push(product);
-            cart.qty.push(1);
         }
         cart.totalPrice += product.price;
     }

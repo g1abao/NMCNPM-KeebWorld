@@ -5,6 +5,11 @@ const { engine } = require('express-handlebars');
 // const sass = require('node-sass');
 const app = express();
 const port = 3000;
+const cookieParser = require('cookie-parser');
+
+app.use(express.json());
+app.use(cookieParser());
+app.use(express.urlencoded({ extended: false }));
 
 const homeRouter = require('./src/routes/home_router');
 const shopRouter = require('./src/routes/shop_router');

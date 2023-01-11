@@ -11,20 +11,19 @@
                             <th>Product</th>
                             <th>Quantity</th>
                             <th>Price</th>
-                            <th>Total</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {{#each cart}}
+                        {{#each cart.products}}
                         <tr>
                             <td>{{name}}</td>
-                            <td>{{quantity}}</td>
+                            <td>{{qty}}</td>
                             <td>{{price}}</td>
-                            <td>{{total}}</td>
                         </tr>
                         {{/each}}
                     </tbody>
                 </table>
+                <p>Total: {{cart.totalPrice}}</p>
               </else>
             </div>
         </div>
