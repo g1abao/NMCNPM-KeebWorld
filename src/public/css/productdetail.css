@@ -82,14 +82,15 @@
   font-style: 14;
   font-weight: 300;
   font-size: 24px;
-  line-height: 29px;
   /* identical to box height */
   color: #000000;
+}
+.product-status p{
+  margin: 0;
 }
 
 .product-price {
   position: absolute;
-  width: 586px;
   height: 80px;
   left: 788px;
   top: 350px;
@@ -134,7 +135,7 @@
   position: absolute;
   height: 38px;
   left: 788px;
-  top: 430px;
+  top: 440px;
 
   font-family: 'Smooch Sans';
   font-style: normal;
@@ -173,9 +174,8 @@
 
 .storages {
   position: absolute;
-  height: 38px;
   left: 1152px;
-  top: 430px;
+  top: 440px;
 
   font-family: 'Smooch Sans';
   font-style: normal;
@@ -185,11 +185,16 @@
   /* identical to box height */
   display: flex;
   align-items: center;
-
+  justify-content: center;
+  margin: 0;
+  padding: 0;
   color: #000000;
 
 }
-
+.storages p{
+  margin-top: 3px;
+  padding: 0;
+}
 .Buy-now {
 
   position: absolute;
@@ -241,8 +246,8 @@
 .product-description {
   position: relative;
   width: 600px;
-  left: 788px;
-  top: 589px;
+  left: 400px;
+  top: 550px;
   font-family: 'Smooch Sans';
   font-style: normal;
   font-size: 30px;
@@ -255,7 +260,7 @@
 
 .description {
   position: absolute;
-  width: 600px;
+  width: 700px;
   left: 788px;
   top: 630px;
   font-family: 'Smooch Sans';

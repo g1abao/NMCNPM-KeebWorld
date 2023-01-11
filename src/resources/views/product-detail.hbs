@@ -1,24 +1,25 @@
-  {{!-- <head>
+{{! <head>
     <title>Product Details</title>
     <link rel="stylesheet" href="../../scss/productdetails.css">
-  </head> --}}
-  <body>
-    <div class="product-name ">
-        <h1>{{product.name}}</h1>
-    </div>
+  </head> }}
+<body>
+  <div class="product-name">
+    <h1>{{product.name}}</h1>
+  </div>
 
   <div class="product-code">
     <label>Mã sản phẩm:</label>
     <p>{{id_product}}</p>
     <label>{{product.id_product}}</label>
-</div>
+  </div>
   <div class="product-status">
     <label>Tình trạng: </label>
     <p>Còn hàng</p>
   </div>
 
   <div class="product-price">
-    <label>{{product.price}}</label>
+    <label>Giá: </label>
+    <p >{{product.price}}</p>
   </div>
 
   <div class="product-quantity">
@@ -29,11 +30,10 @@
   </div>
 
   <script>
-    function totalClick(click){ 
-        const sum = document.getElementById('totalClicks'); 
-        const sumvalue = parseInt(totalClicks.innerText)+click; totalClicks.innerText = sumvalue ;
-    //avoid negative numbers 
-        if (sumvalue<0){ totalClicks.innerText = 0; } }
+    function totalClick(click){ const sum =
+    document.getElementById('totalClicks'); const sumvalue =
+    parseInt(totalClicks.innerText)+click; totalClicks.innerText = sumvalue ;
+    //avoid negative numbers if (sumvalue<0){ totalClicks.innerText = 0; } }
   </script>
 
   <div class="storages">
