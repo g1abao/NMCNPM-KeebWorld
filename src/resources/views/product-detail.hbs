@@ -6,7 +6,10 @@
   <div class="product-name">
     <h1>{{product.name}}</h1>
   </div>
-
+  <div class="product-image">
+      <img src="../../public/img/products/1.jpg" alt="Product Name">
+      <hr>
+  </div>
   <div class="product-code">
     <label>Mã sản phẩm:</label>
     <p>{{id_product}}</p>
@@ -33,7 +36,7 @@
     function totalClick(click){ const sum =
     document.getElementById('totalClicks'); const sumvalue =
     parseInt(totalClicks.innerText)+click; totalClicks.innerText = sumvalue ;
-    //avoid negative numbers if (sumvalue<0){ totalClicks.innerText = 0; } }
+    if (sumvalue<0){ totalClicks.innerText = 0; } }
   </script>
 
   <div class="storages">
