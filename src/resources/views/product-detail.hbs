@@ -1,63 +1,54 @@
-<html>
-  <head>
+{{! <head>
     <title>Product Details</title>
+    <link rel="stylesheet" href="../../scss/productdetails.css">
+  </head> }}
+<body>
+  <div class="product-name">
+    <h1>{{product.name}}</h1>
+  </div>
 
-  <body>
-    <div class="product-name ">
-        <h1>{{product.name}}</h1>
-    </div>
+  <div class="product-code">
+    <label>Mã sản phẩm:</label>
+    <p>{{id_product}}</p>
+    <label>{{product.id_product}}</label>
+  </div>
+  <div class="product-status">
+    <label>Tình trạng: </label>
+    <p>Còn hàng</p>
+  </div>
 
-    <div class="product-image">
-      <img src="/src/public/img/products/3.jpg" alt="Product Name">
-      <hr>
-    </div>
+  <div class="product-price">
+    <label>Giá: </label>
+    <p >{{product.price}}</p>
+  </div>
 
-    <div class="product-code">
-        <label>{{product.id_product}}</label>
+  <div class="product-quantity">
+    <label for="quantity">Số lượng:</label>
+    <button id="plus" onclick="totalClick(1)">+</button>
+    <span id="totalClicks">0</span>
+    <button id="minus" onclick="totalClick(-1)">-</button>
+  </div>
 
-    </div>
+  <script>
+    function totalClick(click){ const sum =
+    document.getElementById('totalClicks'); const sumvalue =
+    parseInt(totalClicks.innerText)+click; totalClicks.innerText = sumvalue ;
+    //avoid negative numbers if (sumvalue<0){ totalClicks.innerText = 0; } }
+  </script>
 
-    <div class="product-status">
-        <label>Tình trạng: </label>
-        <p>Còn hàng</p>
-    </div>    
+  <div class="storages">
+    <label>Tồn kho: </label>
+    <p>3 sản phẩm</p>
+  </div>
 
-    <div class="product-price">
-        <label>{{product.price}}</label>
-      </div>
+  <button class="Buy-now">Mua Ngay</button>
+  <button class="Add-to-cart">Thêm vào giỏ</button>
 
-    <div class="product-quantity">
-        <label for="quantity">Số lượng:</label>
-        <button id="plus" onclick="totalClick(1)">+</button>
-        <span id="totalClicks">0</span>
-        <button id="minus"onclick="totalClick(-1)">-</button>
-    </div>
-
-    <script>
-        function totalClick(click){
-            const sum = document.getElementById('totalClicks');
-            const sumvalue = parseInt(totalClicks.innerText)+click;
-            totalClicks.innerText = sumvalue ; 
-            //avoid negative numbers
-            if (sumvalue<0){
-                totalClicks.innerText = 0;
-            }
-        }        
-    </script>
-    
-    <div class="storages">
-        <label>Tồn kho: </label>
-        <p>3 sản phẩm</p>
-    </div>
-
-    <button class="Buy-now">Mua Ngay</button>
-    <button class="Add-to-cart">Thêm vào giỏ</button>
-
-    <div class="product-description">
-        <label>Mô tả sản phẩm: </label>
-        <hr>
-    </div>
-    {{!
+  <div class="product-description">
+    <label>Mô tả sản phẩm: </label>
+    <hr />
+  </div>
+  {{!
     <div class="description">
         <p>
             Gasket Mount,
@@ -71,14 +62,20 @@
         </p>
     </div>
     }}
-  
-    <div class="comment-box">
-        <h2>Comments</h2>
-        <form action ="#">
-            <input type="text" value="" placeholder="Full name... ">
-            <input type="email" value="" placeholder="Email address... ">
-            <textarea name="comment" id="" cols="30" rows="10" placeholder="Type your comment..."></textarea>
-            <button type="submit">sumbit comment</button>
-        </form>
-    </div>
-  </body>
+
+  <div class="comment-box">
+    <h2>Comments</h2>
+    <form action="#">
+      <input type="text" value="" placeholder="Full name... " />
+      <input type="email" value="" placeholder="Email address... " />
+      <textarea
+        name="comment"
+        id=""
+        cols="30"
+        rows="10"
+        placeholder="Type your comment..."
+      ></textarea>
+      <button type="submit">sumbit comment</button>
+    </form>
+  </div>
+</body>

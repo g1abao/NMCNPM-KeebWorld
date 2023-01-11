@@ -20,17 +20,18 @@ exports.shop = async (req, res) => {
 
 module.exports.add_to_cart = async (req, res) => {
   console.log(req.body)
-  const { id } = req.body;
-  const product = await service.getProductbyID(id);
+  const { cart } = req.body;
+  const product = await service.getProductbyID(cart);
 
   Cart.save(product);
   console.log(Cart.getCart());
-  res.end("saved");
+  res.redirect('shop');
 }
 
 exports.getCart = async (req, res) => {
   res.render('cart', { cart: Cart.getCart() });
 }
+
 exports.detail = async (req, res, next) => {
   const { id_product } = req.params;
 

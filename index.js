@@ -10,7 +10,10 @@ const port = 3000;
 const homeRouter = require('./src/routes/home_router');
 const shopRouter = require('./src/routes/shop_router');
 const cart = require('./src/routes/cart');
+<<<<<<< HEAD
 
+=======
+>>>>>>> a42308afe2bc0722aded03b862d4132277aff17e
 
 app.use(morgan('combined'))
 // using express static
